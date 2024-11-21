@@ -1,6 +1,3 @@
-Here's a well-structured and detailed **README** for your weather assistant chatbot project. It explains the purpose, features, setup, and usage of the project, making it user-friendly and professional.
-
----
 
 # **Weather Assistant Chatbot**
 
@@ -82,18 +79,6 @@ The Weather Assistant Chatbot is a Python-based conversational assistant that pr
    Bot: Goodbye! Stay safe!
    ```
 
----
-
-## **File Structure**
-```
-weather-assistant-chatbot/
-├── README.md         # Project documentation
-├── weather_bot.py    # Main Python script for the chatbot
-└── requirements.txt  # List of dependencies (if necessary)
-```
-
----
-
 ## **Future Enhancements**
 1. **Forecast Feature**: Extend functionality to provide multi-day weather forecasts.
 2. **GUI Version**: Use `Tkinter` or `Flask` to build a graphical interface.
@@ -118,4 +103,4 @@ If you'd like to contribute:
 ---
 
 ## **License**
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the Apache License. See the `LICENSE` file for details.
