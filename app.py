@@ -1,32 +1,14 @@
-import requests
 from flask import Flask, render_template, request
+from weather_utils import get_weather, get_advice
 
 app = Flask(__name__)
 
-# Function to fetch weather data
-def get_weather(city, api_key):
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return None
-
-# Function for friendly advice
-def get_advice(weather):
-    if 'rain' in weather['weather'][0]['description'].lower():
-        return "Take an umbrella!"
-    elif weather['main']['temp'] < 10:
-        return "It's cold outside, wear a jacket!"
-    elif weather['main']['temp'] > 30:
-        return "It's hot, stay hydrated!"
-    else:
-        return "Looks like a pleasant day!"
-
 @app.route("/", methods=["GET", "POST"])
 def home():
+    print("aseel")
     if request.method == "POST":
-        city = request.form["Haifa"]
+        city = request.form["city"] 
+        print(f"City received: {city}")  
         api_key = "edc09ea9d70cc4e184b7362d4a728eaa"
         weather = get_weather(city, api_key)
         if weather:
@@ -40,3 +22,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
