@@ -36,18 +36,8 @@ The Weather Assistant Chatbot is a Python-based conversational assistant that pr
    Make sure Python 3.x is installed. Then install the required libraries:
    ```bash
    pip install requests
+   pip install Flask 
    ```
-
-### **3. Get an API Key**
-   - Go to [OpenWeatherMap](https://openweathermap.org/) and sign up for an account.
-   - Generate an API key from the dashboard.
-
-### **4. Configure the API Key**
-   - Open the `weather_bot.py` file.
-   - Replace `"your_api_key"` with your actual API key:
-     ```python
-     api_key = "your_api_key"
-     ```
 
 ---
 
